@@ -1,8 +1,8 @@
 const bcrypt = require('bcrypt');
 const { Users } = require('../../models/init');
+
 const indexRegistration = (req, res) => {
   // Регистрация нового пользователя
-  console.log(req.body);
   const { username, phone, password, role } = req.body;
   bcrypt.hash(password, +process.env.SALT_ROUNDS).then((hash) => {
     Users.create({ username, phone, password: hash, role })
