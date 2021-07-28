@@ -1,0 +1,82 @@
+:root {
+  --black:#131e20; 
+}
+a{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.sections {
+  display: flex;
+  flex-direction: row;
+  height: 569px;
+}
+.bg-image img {
+  height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 22%;
+}
+.formText{
+  text-align: center;
+  margin: 8px 0;
+}
+button {
+  cursor: pointer;
+  color: rgb(15, 11, 9); 
+  width: 150px;
+  font-size: 25px; 
+  line-height: 25px; 
+  padding: 8px; 
+  border-radius: 15px;    
+  background-image: linear-gradient(to right, rgb(207, 112, 35) 0%, rgb(190, 17, 11) 50%, rgb(230, 226, 39) 100%); box-shadow: rgb(0, 0, 0) 3px 3px 10px 3px; border: 2px solid #ffcf31; display: inline-block;}
+  button:hover {
+  background: #EC793A; }
+  button:active {
+  background: #f3e521; }
+
+  *{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+font-size: 16px;
+letter-spacing: 0.4px;
+word-spacing: 2px;
+color: #000000;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+  }
+
+input {
+  border-radius: 10px;
+  border: 2px solid #000000;
+  padding: 0 8px;
+  outline: none;
+}
+.vhod{
+  font-size: 24px;
+  margin: 20px 0;
+  color: rgb(255, 255, 255);
+  background-color: #ffcf31;
+  text-shadow: #FFF 0 -1px 4px, #ffcf31 0 -10px 20px;
+}
+
+.projectName {
+  color: #c0312f;
+  font-weight: 750;
+  text-shadow: var(--black) 0 0 20px, var(--black) 2px 2px 0, var(--black) -2px -2px 0, var(--black) -2px 2px 0, var(--black) 2px -2px 0;
+}
+
+.regBtn {
+  width: 225px;
+}
+
+.asd {
+  text-align: left;
+  margin-left: 35px;
+}
