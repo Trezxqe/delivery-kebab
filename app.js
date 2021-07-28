@@ -34,9 +34,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Middlewares
 app.use(require('./middlewares/defaultTitle'));
+app.use(require('./middlewares/checkAutorize'));
 
 // Routes
 app.use('/', require('./routes/index.route'));
+app.use('/cabinet', require('./routes/cabinet.route'));
 app.use('/product', require('./routes/product.route'));
 
 // Start
