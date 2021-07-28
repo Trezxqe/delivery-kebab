@@ -23,9 +23,4 @@ const Products = require('./products.model')(sequelize);
 Users.hasMany(Products, { foreignKey: 'userId' });
 Products.belongsTo(Users, { foreignKey: 'userId' });
 
-// const Posts = require('./posts.model')(sequelize);
-
-// Users.hasMany(Posts, { foreignKey: 'authorId' });
-// Posts.belongsTo(Users, { foreignKey: 'authorId' });
-
 module.exports = { Users, Products };
