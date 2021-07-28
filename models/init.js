@@ -17,10 +17,10 @@ const sequelize = new Sequelize(
   },
 );
 
-// const Users = require('./users.model')(sequelize);
+const Users = require('./users.model')(sequelize);
 // const Posts = require('./posts.model')(sequelize);
 
 // Users.hasMany(Posts, { foreignKey: 'authorId' });
 // Posts.belongsTo(Users, { foreignKey: 'authorId' });
 
-// module.exports = { Users, Posts };
+module.exports = { Users };

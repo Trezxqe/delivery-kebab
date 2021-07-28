@@ -33,10 +33,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Middlewares
-const defaultTitle = require('./middlewares/defaultTitle');
-app.use(defaultTitle);
+app.use(require('./middlewares/defaultTitle'));
 
 // Routes
+app.use('/', require('./routes/index.route'));
 
 // Start
 app.listen(PORT, () => {
