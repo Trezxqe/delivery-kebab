@@ -9,6 +9,7 @@ module.exports = (sequelize) => {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
+        allowNull: false
       },
       username: {
         type: DataTypes.STRING,
@@ -17,10 +18,19 @@ module.exports = (sequelize) => {
       password: {
         type: DataTypes.STRING,
       },
+      phone: {
+        type: DataTypes.STRING,
+      },
+      location: {
+        type: DataTypes.STRING,
+      },
+      role: {
+        type: DataTypes.INTEGER,
+      },
       createdAt: DataTypes.DATE,
       updatedAt: DataTypes.DATE,
     },
-    { sequelize, freezeTableName: true, modelName: 'users_table' },
+    { sequelize, freezeTableName: true, modelName: 'users' },
   );
   return Users;
 };

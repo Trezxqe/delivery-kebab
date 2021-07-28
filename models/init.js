@@ -18,9 +18,14 @@ const sequelize = new Sequelize(
 );
 
 const Users = require('./users.model')(sequelize);
+const Products = require('./products.model')(sequelize);
+
+Users.hasMany(Products, { foreignKey: 'userId' });
+Products.belongsTo(Users, { foreignKey: 'userId' });
+
 // const Posts = require('./posts.model')(sequelize);
 
 // Users.hasMany(Posts, { foreignKey: 'authorId' });
 // Posts.belongsTo(Users, { foreignKey: 'authorId' });
 
-module.exports = { Users };
+module.exports = { Users, Products };
