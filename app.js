@@ -37,6 +37,7 @@ app.use(require('./middlewares/defaultTitle'));
 
 // Routes
 app.use('/', require('./routes/index.route'));
+app.use('/product', require('./routes/product.route'));
 
 // Start
 app.listen(PORT, () => {
