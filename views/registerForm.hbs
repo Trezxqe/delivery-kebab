@@ -1,0 +1,43 @@
+
+{{username}}/{{role}}
+<form id="regForm"class="form" method="post" action="/registration">
+          <span class="formText vhod projectName">
+            Deli-Very Kebab
+          </span>
+          <span class="formText vhod">
+            Регистрация
+          </span>
+
+          <div class="formText">
+            <input class="" type="text" name="login" placeholder="Ваше имя" required>
+          </div>
+
+          <div class="formText">
+            <input class="" type="tel" name="phone" placeholder="Ваш номер телефона" required>
+          </div>
+          <div class="formText radio">
+            Кто ты, путник?
+            <p class = 'asd'><input type="radio" name="role" value="1">
+            Покупатель</p>
+            <p class = 'asd'><input type="radio" name="role" value="2">
+            Курьер</p>
+          </div>
+          <div class="formText">
+            <input class="" type="password" name="password" placeholder="Пароль" required>
+          </div>
+          {{!-- <div class="formText">
+            <input class="" type="password" name="corrPass" placeholder="Подтвердите пароль" required>
+          </div> --}}
+
+          <div class="formText">
+            <button type="submit" class="regBtn">
+              Зарегистрироваться
+            </button>
+          </div>
+
+          <div class="formText vhod">
+            <a class="" href="#" style="color: black;">
+              Вернуть всё взад
+            </a>
+          </div>
+        </form>

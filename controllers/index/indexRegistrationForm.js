@@ -1,6 +1,6 @@
 const indexRegistrationForm = (req, res) => {
   // Форма регистрации
-  res.send('REGISTRATION');
+  res.render('registerForm');
 };
 
 module.exports = indexRegistrationForm;
