@@ -5,13 +5,10 @@
 </div>
 <div class='sections'>
   <div class='mapWrapper'>
-    <div
-      id='map'
-      style='width: 570px;
+    <div id='map' style='width: 570px;
     height: 570px;
     border-radius: 25px;
-    overflow: hidden;'
-    ></div>
+    overflow: hidden;'></div>
   </div>
   <form id='registration' class='form' method='post' action='/registration'>
     <span class='formText vhod'>
@@ -37,32 +34,15 @@
       <input type='password' name='password' placeholder='Пароль' required />
     </div>
     <div class='formText'>
-      <input
-        type='text'
-        name='address'
-        id='address'
-        placeholder='Укажите адрес на карте'
-        required
-      />
-      <input
-        type='text'
-        name='coords'
-        id='adCoords'
-        placeholder='Адрес'
-        required
-        hidden
-      />
+      <input type='text' name='address' id='address' placeholder='Укажите адрес на карте' required />
+      <input type='text' name='coords' id='adCoords' placeholder='Адрес' required hidden />
     </div>
     <div id='out'></div>
     <div class='formText submitForm'>
       <button type='submit' class='formButton'>Зарегистрироваться</button>
     </div>
     <div class='formText vhod'>
-      <button
-        type='button'
-        id='formLogin'
-        class='linkButton'
-      >Авторизоваться</button>
+      <button type='button' id='formLogin' class='linkButton'>Авторизоваться</button>
     </div>
   </form>
 </div>

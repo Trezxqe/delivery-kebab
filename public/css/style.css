@@ -270,6 +270,9 @@ input[type='radio'] {
 .logout-style {
   font-size: 8px !important;
 }
+.add-image input{
+  padding-top: 7px;
+}
 
 .login-style,
 .reg-style,
