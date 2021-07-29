@@ -7,7 +7,7 @@
       {{userId}}/{{username}}
     </div>
   {{/if}}
-  <div class='adressItem'>
+  <div class='adressItem' id='inputAddress'>
     <input
       type='text'
       name='login'
@@ -15,20 +15,30 @@
       required
     />
   </div>
+
   <div class='adressItem nav'>
     {{#if isAutorize}}
       {{#if roleUser}}
-        <button id='' type='button'>Профиль П</button>
-
+        <style>
+          #inputAddress { display: block; }
+        </style>
+        <button id='' class='user-style' type='button'>Профиль П</button>
       {{/if}}
       {{#if roleCourier}}
-        <button id='' type='button'>Профиль К</button>
-        <button id='' type='button'>Добавить доставку</button>
+        <button id='' class='courier-style' type='button'>Профиль К</button>
+        <button id='' class='add-style' type='button'>Добавить доставку</button>
       {{/if}}
-      <button id='logOut' type='button'>Выйти</button>
+      <button id='logOut' class='logout-style' type='button'>Выйти</button>
     {{else}}
-      <button id='formLogin' type='button'>Логин</button>
-      <button id='formRegister' type='button'>Регистрация</button>
+      <button id='formLogin' class='login-style' type='button'>Логин</button>
+      <button
+        id='formRegister'
+        class='reg-style'
+        type='button'
+      >Регистрация</button>
+      <style>
+        .adressInput{ justify-content: flex-end; }
+      </style>
     {{/if}}
 
   </div>
