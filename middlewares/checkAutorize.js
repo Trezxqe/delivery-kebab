@@ -8,7 +8,7 @@ const checkAutorize = (req, res, next) => {
     } else {
       res.locals.roleCourier = true;
     }
-  }
+  } 
   next();
 };
 

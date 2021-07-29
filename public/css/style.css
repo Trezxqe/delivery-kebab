@@ -110,21 +110,24 @@ button:active {
   text-transform: none;
 }
 
-input {
+input, select {
   border-radius: 15px;
   border: 2px solid #000000;
   padding: 0 10px;
   outline: none;
   height: 40px;
+  background-color: white;
 }
+
 input[type='radio'] {
   height: 10px;
 }
+
 .submitForm {
   margin-top: 25px;
 }
 
-.vhod {
+.vhod, .username {
   font-size: 30px;
   margin: 10px 0;
   color: rgb(255, 255, 255);
@@ -159,7 +162,9 @@ input[type='radio'] {
   align-items: center;
   margin: 30px;
 }
-
+#inputAddress{
+  display: none;
+}
 .adressInput {
   display: flex;
   justify-content: space-between;
@@ -247,4 +252,26 @@ input[type='radio'] {
 .map img {
   height: 250px;
   width: auto;
+}
+.user-style, .courier-style, .add-style, .logout-style{
+font-size: 8px!important;
+}
+
+.login-style, .reg-style, .user-style, .courier-style, .add-style, .logout-style {
+  cursor: pointer;
+  color: rgb(15, 11, 9);
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 900;
+  padding: 5px 10px;
+  border-radius: 15px;
+  background-image: linear-gradient(
+    to right,
+    rgb(207, 112, 35) 0%,
+    rgb(190, 17, 11) 50%,
+    rgb(230, 226, 39) 100%
+  );
+  box-shadow: rgb(0, 0, 0) 3px 3px 10px 3px;
+  border: 2px solid #ffcf31;
+  display: inline-block;
 }
