@@ -3,6 +3,19 @@ body{
   margin: 0 auto!important;
 }
 
+*{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+font-size: 22px;
+letter-spacing: 0.4px;
+word-spacing: 2px;
+color: #000000;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+
 :root {
   --black:#131e20; 
 }
@@ -44,18 +57,7 @@ button {
   button:active {
   background: #f3e521; }
 
-  *{
-    font-family: "Comic Sans MS", cursive, sans-serif;
-font-size: 16px;
-letter-spacing: 0.4px;
-word-spacing: 2px;
-color: #000000;
-font-weight: normal;
-text-decoration: none;
-font-style: normal;
-font-variant: normal;
-text-transform: none;
-  }
+
 
 input {
   border-radius: 10px;
@@ -78,7 +80,7 @@ input {
 }
 
 .regBtn {
-  width: 225px;
+  width: 275px;
 }
 
 .asd {
@@ -92,7 +94,9 @@ input {
 
 .sorting{
   display: flex;
-  justify-content: center;
+ flex-direction: column;
+ align-items: center;
+margin: 30px;
 }
 
 .adressInput{
@@ -104,10 +108,6 @@ input {
   width: 450px;
 }
 
-.products{
-  margin-left: 10px;
-}
-
 .product{
   display: flex;
   width: 900px;
@@ -115,14 +115,64 @@ input {
 }
 
 .info{
-  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 200px;
 }
 
-.table{
-  width: 100%;
+.info div{
+  font-size: 16px;
 }
 
 .productsListing{
   display: flex;
   justify-content: space-between;
+}
+
+.product-image, .map{
+  margin: 20px;
+}
+
+.info{
+  margin: 10px;
+}
+
+.mainBasket{
+  margin-left: 50px;
+}
+
+.maps{
+  margin-left: 190px;
+}
+
+.mainBasket{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 20em;
+  right: 80px;
+  line-height: 2;
+}
+
+.mainBasket h3 b, .sorting h3{
+  font-weight: 900;
+}
+
+.products {
+  display: flex;
+}
+
+.nav{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -45px;  
+}
+.nav a{
+  margin-right: 30px;
+}
+
+.product-image img, .map img{
+height: 250px;
+width: auto;
 }
