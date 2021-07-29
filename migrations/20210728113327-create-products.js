@@ -11,16 +11,13 @@ module.exports = {
       name: {
         type: Sequelize.STRING,
       },
-      img: {
-        type: Sequelize.STRING,
-      },
       price: {
         type: Sequelize.STRING,
       },
-      discountPrice: {
+      discount: {
         type: Sequelize.STRING,
       },
-      productLocation: {
+      coords: {
         type: Sequelize.STRING,
       },
       userId: {

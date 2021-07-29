@@ -28,6 +28,7 @@ function submitLogin(target) {
 function submitRegister(target) {
   const { login, phone, password, role, address, coords } = target;
   const { action, method } = target;
+  
   fetch(action, {
     method,
     headers: { 'Content-Type': 'application/json' },

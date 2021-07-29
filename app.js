@@ -5,6 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const path = require('path');
 const cookieParser = require('cookie-parser');
+const fileUpload = require('express-fileupload');
 
 // Session
 const session = require('express-session');
@@ -37,6 +38,12 @@ app.use(session(sConfig));
 app.use(cookieParser());
 
 // Static, req.body, json
+app.use(
+  fileUpload({
+    useTempFiles: true,
+    tempFileDir: '/tmp/',
+  }),
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -44,10 +51,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Middlewares
 app.use(require('./middlewares/defaultTitle'));
 app.use(require('./middlewares/checkAutorize'));
+// app.use(multer({dest:"/images/"}).single("img"));
 
-app.get('/test', (req, res) => {
-  res.render('mapTest');
-});
+// const multer = require('multer');
+// const upload = multer({ dest: './public/src/images' });
+
+// app.post('/product/add', upload.single('img'), function (req, res, next) {
+// console.log(req.file);
+// next();
+//   // req.body сохранит текстовые поля, если они будут
+// })
 
 // Routes
 app.use('/', require('./routes/index.route'));

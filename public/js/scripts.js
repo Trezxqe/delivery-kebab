@@ -4,6 +4,8 @@ const body = document.body;
 body.addEventListener('submit', (e) => {
   e.preventDefault();
   // Ловим кнопки submit
+  console.log(e.target.id);
+
   switch (e.target.id) {
     case 'login':
       submitLogin(e.target);
