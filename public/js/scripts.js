@@ -2,11 +2,7 @@
 const body = document.body;
 
 body.addEventListener('submit', (e) => {
-  if (e.target.type !== 'radio') {
-    e.preventDefault();
-  }
-  // Отслеживание событий нажатия
-  // Отключение стандартного поведения
+  e.preventDefault();
   // Ловим кнопки submit
   switch (e.target.id) {
     case 'login':
@@ -20,5 +16,20 @@ body.addEventListener('submit', (e) => {
       break;
     default:
       break;
+  }
+});
+
+body.addEventListener('click', (e) => {
+  if (e.target.type === 'button') {
+    // Ловим кнопки button
+    switch (e.target.id) {
+      case 'formRegister':
+        formRegister(e.target);
+        break;
+      case 'formLogin':
+        formLogin(e.target);
+      default:
+        break;
+    }
   }
 });

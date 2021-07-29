@@ -1,6 +1,9 @@
 body {
   max-width: 1140px;
   margin: 0 auto !important;
+  background-color: #ffcf31;
+  display: flex;
+  align-items: center;
 }
 
 * {
@@ -26,30 +29,46 @@ a {
 }
 .sections {
   display: flex;
-  flex-direction: row;
-  height: 569px;
+  justify-content: space-evenly;
+}
+.bg-image {
+  max-width: 50%;
 }
 .bg-image img {
-  height: 100%;
+  width: 100%;
+  border-radius: 25px;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 22%;
 }
 .formText {
   text-align: center;
   margin: 8px 0;
 }
-button {
+
+.linkButton {
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff00;
+  font-size: 18px;
+  margin-top: 15px;
+}
+.linkButton:hover,
+.linkButton:active {
+  background: none;
+}
+.form label {
+  cursor: pointer;
+}
+.formButton {
   cursor: pointer;
   color: rgb(15, 11, 9);
-  width: 150px;
   font-size: 25px;
   line-height: 25px;
-  padding: 8px;
+  padding: 10px 20px;
   border-radius: 15px;
   background-image: linear-gradient(
     to right,
@@ -60,6 +79,15 @@ button {
   box-shadow: rgb(0, 0, 0) 3px 3px 10px 3px;
   border: 2px solid #ffcf31;
   display: inline-block;
+}
+#out {
+  display: none;
+  max-width: 350px;
+  margin: auto;
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
+  margin-top: 15px;
 }
 button:hover {
   background: #ec793a;
@@ -82,20 +110,29 @@ button:active {
 }
 
 input {
-  border-radius: 10px;
+  border-radius: 15px;
   border: 2px solid #000000;
-  padding: 0 8px;
+  padding: 0 10px;
   outline: none;
+  height: 40px;
 }
+input[type='radio'] {
+  height: 10px;
+}
+.submitForm {
+  margin-top: 25px;
+}
+
 .vhod {
-  font-size: 24px;
-  margin: 20px 0;
+  font-size: 30px;
+  margin: 10px 0;
   color: rgb(255, 255, 255);
   background-color: #ffcf31;
   text-shadow: #fff 0 -1px 4px, #ffcf31 0 -10px 20px;
 }
 
 .projectName {
+  font-size: 50px;
   color: #c0312f;
   font-weight: 750;
   text-shadow: var(--black) 0 0 20px, var(--black) 2px 2px 0,

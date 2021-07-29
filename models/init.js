@@ -8,12 +8,11 @@ const config = require(path.join(__dirname, '../config/config.json'))[env];
 
 // Получаем данные для подключения
 const sequelize = new Sequelize(
-  config.database,
-  config.username,
-  config.password,
+  process.env.DATABASE_NAME,
+  process.env.DATABASE_USER,
+  process.env.DATABASE_PASS,
   {
-    port: config.port,
-    dialect: config.dialect,
+    dialect: process.env.DATABASE_DIALECT,
   },
 );
 

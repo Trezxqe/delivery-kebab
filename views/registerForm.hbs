@@ -1,38 +1,43 @@
-<form id='registration' class='form' method='post' action='/registration'>
-  <span class='formText vhod projectName'>
-    Deli-Very Kebab
-  </span>
-  <span class='formText vhod'>
-    Регистрация
-  </span>
-  <div class='formText'>
-    <input class='' type='text' name='login' placeholder='Ваше имя' required />
+<div class='sections'>
+  <div class='bg-image'>
+    <img src='./src/site/kebab.jpg' alt='' />
   </div>
-  <div class='formText'>
-    <input type='tel' name='phone' placeholder='Ваш номер телефона' required />
-  </div>
-  <div class='formText radio'>
-    Кто ты, путник?
-    <p class='asd'>
-      <input type='radio' name='role' value='1' />
-      Покупатель
-    </p>
-    <p class='asd'>
-      <input type='radio' name='role' value='2' />
-      Курьер
-    </p>
-  </div>
-  <div class='formText'>
-    <input type='password' name='password' placeholder='Пароль' required />
-  </div>
-  <div class='formText'>
-    <button type='submit' class='regBtn'>
-      Зарегистрироваться
-    </button>
-  </div>
-  <div class='formText vhod'>
-    <a class='' href='#' style='color: black;'>
-      Вернуть всё взад
-    </a>
-  </div>
-</form>
+  <form id='registration' class='form' method='post' action='/registration'>
+    <span class='formText vhod projectName'>
+      Deli-Very Kebab
+    </span>
+    <span class='formText vhod'>
+      Регистрация
+    </span>
+    <div class='formText'>
+      <input type='text' name='login' placeholder='Имя' required />
+    </div>
+    <div class='formText'>
+      <input type='tel' name='phone' placeholder='Номер телефона' required />
+    </div>
+    <div class='formText radio'>
+      <label>
+        <input type='radio' value='1' name='role' />
+        <span>Покупатель</span>
+      </label>
+      <label>
+        <input type='radio' value='2' name='role' />
+        <span>Курьер</span>
+      </label>
+    </div>
+    <div class='formText'>
+      <input type='password' name='password' placeholder='Пароль' required />
+    </div>
+    <div id='out'></div>
+    <div class='formText submitForm'>
+      <button type='submit' class='formButton'>Зарегистрироваться</button>
+    </div>
+    <div class='formText vhod'>
+      <button
+        type='button'
+        id='formLogin'
+        class='linkButton'
+      >Авторизоваться</button>
+    </div>
+  </form>
+</div>

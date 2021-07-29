@@ -1,6 +1,6 @@
 const indexLoginForm = (req, res) => {
   // Форма входа
-  res.send('LOGIN');
+  res.render('loginForm');
 };
 
 module.exports = indexLoginForm;
