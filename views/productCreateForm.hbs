@@ -1,6 +1,8 @@
-<form action='/product/add' method='post' id='addProduct'>
-  <input type='file' name='file' placeholder='Изображение' />
-  <input type='text' placeholder='Название' />
-  <input type='text' placeholder='Адрес' />
+<form enctype='multipart/form-data' action='/product/add' method='post' id='addProduct'>
+  <input type='file' name='img' placeholder='Изображение' />
+  
+  <input type='text' name='name' placeholder='Название' />
+  <input type='text' name='productLocation' placeholder='Адрес' />
+  <input type='number' name='price' placeholder='Цена заказа' />
   <button type='submit'>Отправить</button>
 </form>
