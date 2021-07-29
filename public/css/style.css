@@ -1,12 +1,12 @@
-body{
+body {
   max-width: 1140px;
-  margin: 0 auto!important;
+  margin: 0 auto !important;
 }
 
 :root {
-  --black:#131e20; 
+  --black: #131e20;
 }
-a{
+a {
   color: black;
   text-decoration: none;
   cursor: pointer;
@@ -26,36 +26,47 @@ a{
   justify-content: center;
   margin-left: 22%;
 }
-.formText{
+.formText {
   text-align: center;
   margin: 8px 0;
 }
 button {
   cursor: pointer;
-  color: rgb(15, 11, 9); 
+  color: rgb(15, 11, 9);
   width: 150px;
-  font-size: 25px; 
-  line-height: 25px; 
-  padding: 8px; 
-  border-radius: 15px;    
-  background-image: linear-gradient(to right, rgb(207, 112, 35) 0%, rgb(190, 17, 11) 50%, rgb(230, 226, 39) 100%); box-shadow: rgb(0, 0, 0) 3px 3px 10px 3px; border: 2px solid #ffcf31; display: inline-block;}
-  button:hover {
-  background: #EC793A; }
-  button:active {
-  background: #f3e521; }
+  font-size: 25px;
+  line-height: 25px;
+  padding: 8px;
+  border-radius: 15px;
+  background-image: linear-gradient(
+    to right,
+    rgb(207, 112, 35) 0%,
+    rgb(190, 17, 11) 50%,
+    rgb(230, 226, 39) 100%
+  );
+  box-shadow: rgb(0, 0, 0) 3px 3px 10px 3px;
+  border: 2px solid #ffcf31;
+  display: inline-block;
+}
+button:hover {
+  background: #ec793a;
+}
+button:active {
+  background: #f3e521;
+}
 
-  *{
-    font-family: "Comic Sans MS", cursive, sans-serif;
-font-size: 16px;
-letter-spacing: 0.4px;
-word-spacing: 2px;
-color: #000000;
-font-weight: normal;
-text-decoration: none;
-font-style: normal;
-font-variant: normal;
-text-transform: none;
-  }
+* {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  word-spacing: 2px;
+  color: #000000;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+}
 
 input {
   border-radius: 10px;
@@ -63,18 +74,19 @@ input {
   padding: 0 8px;
   outline: none;
 }
-.vhod{
+.vhod {
   font-size: 24px;
   margin: 20px 0;
   color: rgb(255, 255, 255);
   background-color: #ffcf31;
-  text-shadow: #FFF 0 -1px 4px, #ffcf31 0 -10px 20px;
+  text-shadow: #fff 0 -1px 4px, #ffcf31 0 -10px 20px;
 }
 
 .projectName {
   color: #c0312f;
   font-weight: 750;
-  text-shadow: var(--black) 0 0 20px, var(--black) 2px 2px 0, var(--black) -2px -2px 0, var(--black) -2px 2px 0, var(--black) 2px -2px 0;
+  text-shadow: var(--black) 0 0 20px, var(--black) 2px 2px 0,
+    var(--black) -2px -2px 0, var(--black) -2px 2px 0, var(--black) 2px -2px 0;
 }
 
 .regBtn {
@@ -86,43 +98,43 @@ input {
   margin-left: 35px;
 }
 
-#priceSort{
+#priceSort {
   outline: none;
 }
 
-.sorting{
+.sorting {
   display: flex;
   justify-content: center;
 }
 
-.adressInput{
+.adressInput {
   text-align: center;
 }
 
-.adressInput input{
+.adressInput input {
   padding: 10px;
   width: 450px;
 }
 
-.products{
+.products {
   margin-left: 10px;
 }
 
-.product{
+.product {
   display: flex;
   width: 900px;
   height: 250px;
 }
 
-.info{
+.info {
   vertical-align: middle;
 }
 
-.table{
+.table {
   width: 100%;
 }
 
-.productsListing{
+.productsListing {
   display: flex;
   justify-content: space-between;
 }
