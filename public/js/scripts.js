@@ -28,6 +28,10 @@ body.addEventListener('click', (e) => {
         break;
       case 'formLogin':
         formLogin(e.target);
+        break;
+      case 'logOut':
+        logOut(e.target);
+        break;
       default:
         break;
     }

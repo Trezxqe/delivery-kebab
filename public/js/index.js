@@ -60,3 +60,15 @@ function formRegister(target) {
   }
   )
 }
+
+function logOut(target) {
+  fetch('/logout', {
+  })
+  .then((response) => response.json())
+  .then((data) => {
+     if(data.message == 'logout'){
+      location.reload();
+     }
+  }
+  ).catch(console.log)
+}

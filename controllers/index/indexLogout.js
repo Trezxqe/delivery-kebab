@@ -1,6 +1,7 @@
 const indexLogout = (req, res) => {
-  // Выход из профиля
-  res.send('LOGOUT');
+  req.session.destroy();
+  res.clearCookie('uSID');
+  res.json({ message: 'logout' });
 };
 
 module.exports = indexLogout;

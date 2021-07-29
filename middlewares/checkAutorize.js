@@ -3,7 +3,7 @@ const checkAutorize = (req, res, next) => {
     res.locals.userId = req.session.userId;
     res.locals.username = req.session.username;
     res.locals.isAutorize = true;
-    if (res.session.roleUser) {
+    if (req.session.roleUser) {
       res.locals.roleUser = true;
     } else {
       res.locals.roleCourier = true;
