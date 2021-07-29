@@ -11,7 +11,11 @@ const indexLogin = (req, res) => {
           req.session.userId = db.id;
           req.session.isAutorize = true;
           req.session.username = db.username;
-          req.session.role = db.role;
+          if (db.role === 1) {
+            req.session.roleUser = true;
+          } else {
+            req.session.roleCourier = true;
+          }
           res.json({ message: 'Успешный вход.', error: false });
         } else {
           res.json({ message: 'Неверный пароль.', error: true });

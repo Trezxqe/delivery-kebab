@@ -48,7 +48,12 @@ a {
   text-align: center;
   margin: 8px 0;
 }
-
+.formText input {
+  min-width: 250px;
+}
+.formText label input {
+  min-width: auto;
+}
 .linkButton {
   cursor: pointer;
   border: none;
@@ -165,6 +170,9 @@ input[type='radio'] {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+}
+.titleForm {
+  text-align: center;
 }
 .adressItem input {
   width: 100%;

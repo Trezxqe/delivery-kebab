@@ -26,7 +26,7 @@ function submitLogin(target) {
 }
 
 function submitRegister(target) {
-  const { login, phone, password, role } = target;
+  const { login, phone, password, role, address, coords } = target;
   const { action, method } = target;
   fetch(action, {
     method,
@@ -36,6 +36,8 @@ function submitRegister(target) {
       phone: phone.value,
       password: password.value,
       role: role.value,
+      address: address.value,
+      coords: coords.value,
     }),
   })
     .then((response) => response.json())
@@ -69,6 +71,7 @@ function formRegister(target) {
     .then((data) => {
       const inner = document.getElementById('inner');
       inner.innerHTML = data;
+      ymaps.ready(init);
     });
 }
 

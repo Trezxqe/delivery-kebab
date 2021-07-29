@@ -3,9 +3,10 @@ const { Users } = require('../../models/init');
 
 const indexRegistration = (req, res) => {
   // Регистрация нового пользователя
-  const { username, phone, password, role } = req.body;
+  console.log(req.body);
+  const { username, phone, password, role, address, coords } = req.body;
   bcrypt.hash(password, +process.env.SALT_ROUNDS).then((hash) => {
-    Users.create({ username, phone, password: hash, role })
+    Users.create({ username, phone, password: hash, role, address, coords })
       .then((data) => {
         req.session.userId = data.id;
         req.session.isAutorize = true;

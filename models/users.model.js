@@ -9,7 +9,7 @@ module.exports = (sequelize) => {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
-        allowNull: false
+        allowNull: false,
       },
       username: {
         type: DataTypes.STRING,
@@ -21,7 +21,10 @@ module.exports = (sequelize) => {
       phone: {
         type: DataTypes.STRING,
       },
-      location: {
+      coords: {
+        type: DataTypes.STRING,
+      },
+      address: {
         type: DataTypes.STRING,
       },
       role: {

@@ -20,6 +20,15 @@ const sConfig = {
   },
 };
 
+// CORS
+// const cors = require('cors');
+// const corsOptions = {
+//   origin: ['http://localhost:3000', 'http://localhost:4000'],
+//   optionsSuccessStatus: 200,
+//  };
+
+// app.use(cors(corsOptions));
+
 // HBS
 app.set('view engine', 'hbs');
 
@@ -35,6 +44,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Middlewares
 app.use(require('./middlewares/defaultTitle'));
 app.use(require('./middlewares/checkAutorize'));
+
+app.get('/test', (req, res) => {
+  res.render('mapTest');
+});
 
 // Routes
 app.use('/', require('./routes/index.route'));

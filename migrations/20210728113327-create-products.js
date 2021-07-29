@@ -6,22 +6,22 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       img: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       price: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       discountPrice: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       productLocation: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       userId: {
         type: Sequelize.INTEGER,
@@ -29,23 +29,23 @@ module.exports = {
           model: 'users',
           key: 'id',
           onUpdate: 'cascade',
-          onCreate: 'cascade'
-        }
+          onCreate: 'cascade',
+        },
       },
       status: {
-        type: Sequelize.STRING
-      }, 
+        type: Sequelize.STRING,
+      },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('products');
-  }
+  },
 };
