@@ -17,12 +17,14 @@ const indexRegistration = (req, res) => {
         }
         res.json({
           message: `Пользователь ${username} успешно зарегистрировался`,
+          error: false,
         });
       })
       .catch((err) => {
         console.log(err);
         res.json({
           message: `Ошибка. Пользователь с таким именем (${username}) уже зарегистрирован`,
+          error: true,
         });
       });
   });

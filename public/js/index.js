@@ -10,7 +10,18 @@ function submitLogin(target) {
     }),
   })
     .then((response) => response.json())
-    .then((data) => console.log(data))
+    .then((data) => {
+      if (data.error) {
+        const p = document.createElement('p');
+        p.innerText = data.message;
+        const out = document.getElementById('out');
+        out.innerHTML = '';
+        out.append(p);
+        out.style.display = 'block';
+      } else {
+        location.reload();
+      }
+    })
     .catch(console.log);
 }
 
@@ -29,46 +40,45 @@ function submitRegister(target) {
   })
     .then((response) => response.json())
     .then((data) => {
-      const p = document.createElement('p');
-      p.innerText = data.message;
-      const out = document.getElementById('out');
-      out.innerHTML = '';
-      out.append(p);
-      out.style.display = 'block';
+      if (data.error) {
+        const p = document.createElement('p');
+        p.innerText = data.message;
+        const out = document.getElementById('out');
+        out.innerHTML = '';
+        out.append(p);
+        out.style.display = 'block';
+      } else {
+        location.reload();
+      }
     })
     .catch(console.log);
 }
 
 function formLogin(target) {
-fetch('/login', {
-})
-.then((response) => response.text())
-.then((data) => {
-  const inner = document.getElementById('inner');
-  inner.innerHTML = data;
-}
-)
+  fetch('/login', {})
+    .then((response) => response.text())
+    .then((data) => {
+      const inner = document.getElementById('inner');
+      inner.innerHTML = data;
+    });
 }
 
 function formRegister(target) {
-  fetch('/registration', {
-  })
-  .then((response) => response.text())
-  .then((data) => {
-    const inner = document.getElementById('inner');
-    inner.innerHTML = data;
-  }
-  )
+  fetch('/registration', {})
+    .then((response) => response.text())
+    .then((data) => {
+      const inner = document.getElementById('inner');
+      inner.innerHTML = data;
+    });
 }
 
 function logOut(target) {
-  fetch('/logout', {
-  })
-  .then((response) => response.json())
-  .then((data) => {
-     if(data.message == 'logout'){
-      location.reload();
-     }
-  }
-  ).catch(console.log)
+  fetch('/logout', {})
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.message == 'logout') {
+        location.reload();
+      }
+    })
+    .catch(console.log);
 }

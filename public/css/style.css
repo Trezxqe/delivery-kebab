@@ -83,7 +83,8 @@ a {
 #out {
   display: none;
   max-width: 350px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 0 15px;
   text-align: center;
   background-color: white;
   border-radius: 15px;
@@ -160,12 +161,26 @@ input[type='radio'] {
 }
 
 .adressInput {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.adressItem input {
+  width: 100%;
+}
+.adressItem {
+  width: 50%;
+}
+.adressItem.nav {
+  width: 25%;
+  text-align: right;
+}
+.adressItem.username {
+  width: 25%;
 }
 
 .adressInput input {
-  padding: 10px;
-  width: 450px;
 }
 
 .product {
@@ -226,12 +241,6 @@ input[type='radio'] {
 }
 
 .nav {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: -45px;
-}
-.nav a {
-  margin-right: 30px;
 }
 
 .product-image img,
