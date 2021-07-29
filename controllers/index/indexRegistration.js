@@ -10,7 +10,11 @@ const indexRegistration = (req, res) => {
         req.session.userId = data.id;
         req.session.isAutorize = true;
         req.session.username = username;
-        req.session.role = role;
+        if (role === '1') {
+          req.session.roleUser = true;
+        } else {
+          req.session.roleCourier = true;
+        }
         res.json({
           message: `Пользователь ${username} успешно зарегистрировался`,
         });
