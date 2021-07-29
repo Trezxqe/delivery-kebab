@@ -39,6 +39,24 @@ function submitRegister(target) {
     .catch(console.log);
 }
 
-function formLogin(target) {}
+function formLogin(target) {
+fetch('/login', {
+})
+.then((response) => response.text())
+.then((data) => {
+  const inner = document.getElementById('inner');
+  inner.innerHTML = data;
+}
+)
+}
 
-function formRegister(target) {}
+function formRegister(target) {
+  fetch('/registration', {
+  })
+  .then((response) => response.text())
+  .then((data) => {
+    const inner = document.getElementById('inner');
+    inner.innerHTML = data;
+  }
+  )
+}
