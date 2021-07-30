@@ -34,6 +34,7 @@ module.exports = (sequelize) => {
       },
       status: {
         type: DataTypes.STRING,
+        defaultValue: 'new',
       },
       createdAt: DataTypes.DATE,
       updatedAt: DataTypes.DATE,

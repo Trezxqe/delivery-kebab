@@ -31,6 +31,7 @@ module.exports = {
       },
       status: {
         type: Sequelize.STRING,
+        defaultValue: 'new',
       },
       createdAt: {
         allowNull: false,

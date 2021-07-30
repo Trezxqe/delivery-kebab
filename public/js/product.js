@@ -17,7 +17,6 @@ function submitProduct(target) {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       const image = new FormData();
       image.append('file', img.files[0]);
       fetch(action, {
@@ -29,6 +28,13 @@ function submitProduct(target) {
     })
     .catch(console.log);
 }
-
+function createProduct(target) {
+  fetch('/product/add', {})
+    .then((response) => response.text())
+    .then((data) => {
+      const inner = document.getElementById('inner');
+      inner.innerHTML = data;
+    });
+}
 function deleteProduct(target) {}
 function showProducts(target) {}

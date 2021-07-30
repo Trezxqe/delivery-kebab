@@ -34,6 +34,9 @@ body.addEventListener('click', (e) => {
       case 'logOut':
         logOut(e.target);
         break;
+      case 'createProduct':
+        createProduct(e.target);
+        break;
       default:
         break;
     }
