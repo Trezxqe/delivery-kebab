@@ -17,15 +17,12 @@ function submitProduct(target) {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       const image = new FormData();
       image.append('file', img.files[0]);
       fetch(action, {
         method,
         body: image,
-      })
-        .then((response) => response.json())
-        .then(console.log);
+      }).then((response) => response.json());
     })
     .catch(console.log);
 }
