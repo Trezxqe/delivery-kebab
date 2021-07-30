@@ -4,18 +4,11 @@
 <div class='adressInput'>
   {{#if isAutorize}}
     <div class='adressItem username' id='userData' data-coords='{{coords}}'>
-      {{userId}}/{{username}}
+      <span>{{username}}
+        -
+        {{#if roleUser}}Покупатель{{else}}Курьер{{/if}}</span>
     </div>
   {{/if}}
-  <div class='adressItem' id='inputAddress'>
-    <input
-      type='text'
-      name='login'
-      placeholder='Введите адрес доставки'
-      required
-    />
-  </div>
-
   <div class='adressItem nav'>
     {{#if isAutorize}}
       {{#if roleUser}}

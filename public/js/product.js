@@ -26,7 +26,14 @@ function submitProduct(target) {
         body: image,
       })
         .then((response) => response.json())
-        .then(console.log);
+        .then((data) => {
+          const p = document.createElement('p');
+          p.innerText = data.message;
+          const out = document.getElementById('out');
+          out.innerHTML = '';
+          out.append(p);
+          out.style.display = 'block';
+        });
     })
     .catch(console.log);
 }

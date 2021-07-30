@@ -51,6 +51,10 @@ a {
 .formText input {
   min-width: 250px;
 }
+.formText input:read-only {
+  background-color: #c3c3c3;
+  opacity: 0.7;
+}
 .formText label input {
   min-width: auto;
 }
@@ -172,6 +176,9 @@ input[type='radio'] {
 #inputAddress {
   display: none;
 }
+.adressItem span {
+  font-size: 20px;
+}
 .adressInput {
   display: flex;
   justify-content: space-between;
@@ -190,11 +197,11 @@ input[type='radio'] {
   width: 50%;
 }
 .adressItem.nav {
-  width: 25%;
+  width: 50%;
   text-align: right;
 }
 .adressItem.username {
-  width: 25%;
+  width: 50%;
 }
 
 .adressInput input {
@@ -272,7 +279,7 @@ input[type='radio'] {
 .courier-style,
 .add-style,
 .logout-style {
-  font-size: 8px !important;
+  font-size: 16px !important;
 }
 .add-image {
   padding-top: 7px;
