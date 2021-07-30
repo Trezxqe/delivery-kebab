@@ -340,3 +340,13 @@ input[type='file'] {
   border-radius: 25px;
   overflow: hidden;
 }
+
+.success-block {
+  position: absolute;
+  left: 40%;
+  z-index: 9;
+  background: green;
+  color: white;
+  padding: 40px;
+  border-radius: 25px;
+}
