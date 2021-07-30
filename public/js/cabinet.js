@@ -5,7 +5,7 @@ function courierOrderClose(target) {
   fetch(`/product/delete/${id}`)
     .then((res) => res.json())
     .then((data) => {
-      const div = document.getElementById(`pending_${id}`);
+      const div = document.getElementById(`list_${id}`);
       div.style = 'display: none';
     });
 }

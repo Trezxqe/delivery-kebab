@@ -7,11 +7,12 @@ const indexRegistration = (req, res) => {
   const { username, phone, password, role, address, coords } = req.body;
   bcrypt.hash(password, +process.env.SALT_ROUNDS).then((hash) => {
     Users.create({ username, phone, password: hash, role, address, coords })
-      .then((data) => {
-        req.session.userId = data.id;
+      .then((db) => {
+        req.session.userId = db.id;
         req.session.isAutorize = true;
         req.session.username = username;
         req.session.coords = coords;
+        req.session.phone = db.phone;
         if (role === '1') {
           req.session.roleUser = true;
         } else {
