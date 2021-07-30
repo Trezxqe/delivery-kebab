@@ -34,19 +34,7 @@
         .adressInput{ justify-content: flex-end; }
       </style>
     {{/if}}
-
   </div>
-</div>
-<div class='sorting' style='display: none;'>
-  <h3>Сортировать по:</h3>
-  <a href='#'>&nbsp;расстоянию</a>
-  <p>
-    &nbsp;цене:
-    <select name='price' id='priceSort'>
-      <option value='DESC'>по возрастанию</option>
-      <option value='ASC'>по убыванию</option>
-    </select>
-  </p>
 </div>
 
 <div class='productsListing'>
@@ -62,6 +50,11 @@
             <div class='product-price'>Цена: {{price}}</div>
             <div class='product-discount'>Цена со скидкой: {{discount}}</div>
             <div class='product-time'>Адрес: {{address}}</div>
+            <button
+              type='button'
+              data-type='buy'
+              id='buy_{{id}}'
+            >Купить</button>
           </div>
           <div class='mapWrapper'>
             <div

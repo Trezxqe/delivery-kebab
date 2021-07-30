@@ -20,7 +20,7 @@ body.addEventListener('submit', (e) => {
 });
 
 body.addEventListener('click', (e) => {
-  if (e.target.type === 'button') {
+  if (e.target.type === 'button' && !e.target.dataset.type) {
     // Ловим кнопки button
     switch (e.target.id) {
       case 'formRegister':
@@ -34,6 +34,18 @@ body.addEventListener('click', (e) => {
         break;
       case 'createProduct':
         createProduct(e.target);
+        break;
+      default:
+        break;
+    }
+  } else if (e.target.type === 'button' && e.target.dataset.type) {
+    // Ловим кнопки button с data-type
+    switch (e.target.dataset.type) {
+      case 'buy':
+        buyProduct(e.target);
+        break;
+      case 'close':
+        courierOrderClose(e.target);
         break;
       default:
         break;

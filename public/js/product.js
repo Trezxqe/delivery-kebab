@@ -46,5 +46,6 @@ function createProduct(target) {
       ymaps.ready(init);
     });
 }
-function deleteProduct(target) {}
-function showProducts(target) {}
+function buyProduct(target) {
+  console.log('buy');
+}
