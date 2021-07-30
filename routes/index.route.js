@@ -9,4 +9,8 @@ route.get('/login', init.indexLoginForm);
 route.post('/login', init.indexLogin);
 route.get('/logout', init.indexLogout);
 
+route.get('/courier', init.indexCourier);
+route.get('/courier/profile', init.profileCourier);
+route.get('/profile', init.profileUser);
+
 module.exports = route;

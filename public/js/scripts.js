@@ -35,6 +35,12 @@ body.addEventListener('click', (e) => {
       case 'createProduct':
         createProduct(e.target);
         break;
+      case 'courierProfile':
+        courierProfile(e.target);
+        break;
+      case 'userProfile':
+        userProfile(e.target);
+        break;
       default:
         break;
     }

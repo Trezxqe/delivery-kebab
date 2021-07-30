@@ -32,6 +32,9 @@ module.exports = {
           onCreate: 'cascade',
         },
       },
+      buyerId: {
+        type: Sequelize.INTEGER,
+      },
       status: {
         type: Sequelize.STRING,
         defaultValue: 'new',

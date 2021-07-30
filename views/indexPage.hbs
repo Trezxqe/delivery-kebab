@@ -15,10 +15,11 @@
         <style>
           #inputAddress { display: block; }
         </style>
-        <button id='' class='user-style' type='button'>Профиль П</button>
+        <button id='userProfile' class='user-style' type='button'>Профиль П</button>
       {{/if}}
       {{#if roleCourier}}
-        <button id='' class='courier-style' type='button'>Профиль К</button>
+        <button id='courierProfile' class='courier-style' type='button'>Профиль
+          К</button>
         <button id='createProduct' class='add-style' type='button'>Добавить
           доставку</button>
       {{/if}}
@@ -31,7 +32,7 @@
         type='button'
       >Регистрация</button>
       <style>
-        .adressInput{ justify-content: flex-end; }
+        .adressInput { justify-content: flex-end; }
       </style>
     {{/if}}
   </div>
@@ -51,6 +52,7 @@
             <div class='product-discount'>Цена со скидкой: {{discount}}</div>
             <div class='product-time'>Адрес: {{address}}</div>
             <button
+              style='button-buy'
               type='button'
               data-type='buy'
               id='buy_{{id}}'
