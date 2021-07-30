@@ -23,6 +23,9 @@ module.exports = (sequelize) => {
       coords: {
         type: DataTypes.INTEGER,
       },
+      address: {
+        type: DataTypes.INTEGER,
+      },
       userId: {
         type: DataTypes.INTEGER,
         references: {

@@ -1,11 +1,13 @@
 function submitProduct(target) {
-  const { img, name, price, coords } = target;
+  const { img, name, price, coords, address, discount } = target;
   const { action, method } = target;
 
   const text = {
     name: name.value,
     coords: coords.value,
+    address: address.value,
     price: price.value,
+    discount: discount.value,
   };
 
   fetch(action, {

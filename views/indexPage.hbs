@@ -3,7 +3,7 @@
 </form>
 <div class='adressInput'>
   {{#if isAutorize}}
-    <div class='adressItem username'>
+    <div class='adressItem username' id='userData' data-coords='{{coords}}'>
       {{userId}}/{{username}}
     </div>
   {{/if}}
@@ -57,50 +57,36 @@
 </div>
 
 <div class='productsListing'>
-  <div class='mainBuyers'>
-    <div class='products'>
-      <div class='product-image'>
-        <img
-          src='/src/images/shaurma.jpeg'
-          alt=''
-          style='width: 100%; height: 100%'
-        />
-      </div>
-      <div class='info'>
-        <div class='product-name'>Название:</div>
-        <div class='product-price'>Цена:</div>
-        <div class='product-discount'>Цена со скидкой:</div>
-        <div class='product-time'>Время в пути:</div>
-      </div>
-      <div class='maps'>
-        <div class='map'>
-          <img src='/src/images/map.jpeg' alt='' />
+  <div class='mainBuyers' id='mainBuyers'>
+    {{#if db}}
+      {{#each db}}
+        <div class='products' id='product_{{id}}' data-coords='{{coords}}'>
+          <div class='product-image'>
+            <img src='/src/images/img_{{id}}.jpg' />
+          </div>
+          <div class='info'>
+            <div class='product-name'>Название: {{name}}</div>
+            <div class='product-price'>Цена: {{price}}</div>
+            <div class='product-discount'>Цена со скидкой: {{discount}}</div>
+            <div class='product-time'>Адрес: {{address}}</div>
+          </div>
+          <div class='mapWrapper'>
+            <div
+              id='map_{{id}}'
+              class='listing_map'
+              style='width: 500px; height: 250px;'
+              data-coords={{coords}}
+              data-id={{id}}
+            ></div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class='products'>
-      <div class='product-image'>
-        <img
-          src='/src/images/shaurma.jpeg'
-          alt=''
-          style='width: 100%; height: 100%'
-        />
-      </div>
-      <div class='info'>
-        <div class='product-name'>Название:</div>
-        <div class='product-price'>Цена:</div>
-        <div class='product-discount'>Цена со скидкой:</div>
-        <div class='product-time'>Время в пути:</div>
-      </div>
-      <div class='maps'>
-        <div class='map'>
-          <img src='/src/images/map.jpeg' alt='' />
-        </div>
-      </div>
-    </div>
+      {{/each}}
+    {{else}}
+      <h2 class='catalog-empty'>Нет доступных заказов</h2>
+    {{/if}}
   </div>
 
-  <div class='mainBasket'>
+  <div class='mainBasket' style='display: none;'>
     <h3><b>Корзина</b></h3>
     <br />
     <div>Сумма заказа:</div>

@@ -11,6 +11,7 @@ const indexRegistration = (req, res) => {
         req.session.userId = data.id;
         req.session.isAutorize = true;
         req.session.username = username;
+        req.session.coords = coords;
         if (role === '1') {
           req.session.roleUser = true;
         } else {
