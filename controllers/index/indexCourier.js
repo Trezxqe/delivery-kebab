@@ -1,5 +1,5 @@
 const indexCourier = (req, res) => {
-  // Главная страница
+  // Страница курьера
   res.render('courierPage');
 };
 

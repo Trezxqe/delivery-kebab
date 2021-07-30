@@ -2,30 +2,11 @@
   <span class="formText vhod projectName"> Deli-Very Kebab </span>
 </form>
 
-<div class='adressItem nav'>
-  {{#if isAutorize}}
-  {{#if roleUser}}
-  <style>
-    #inputAddress {
-      display: block;
-    }
-  </style>
-  <button id='' class='user-style' type='button'>Профиль П</button>
-  {{/if}}
-  {{#if roleCourier}}
+<div class='adressItem nav' style="text-align: right; width: auto;">
+
   <button id='' class='courier-style' type='button'>Профиль К</button>
   <button id='' class='add-style' type='button'>Добавить доставку</button>
-  {{/if}}
   <button id='logOut' class='logout-style' type='button'>Выйти</button>
-  {{else}}
-  <button id='formLogin' class='login-style' type='button'>Логин</button>
-  <button id='formRegister' class='reg-style' type='button'>Регистрация</button>
-  <style>
-    .adressInput {
-      justify-content: flex-end;
-    }
-  </style>
-  {{/if}}
 
 </div>
 
@@ -35,7 +16,7 @@
     <div class="products">
       <div class="product-image">
         <div class='vhod' style="margin-bottom: 20px;">Добавлено: </div>
-        <img src="" alt="" />
+        <img src="../src/images/" alt="" />
       </div>
       <div class="info" style="justify-content: flex-start; line-height: 2; margin-top: 100px;">
         <div class="product-name">Название:</div>
@@ -50,7 +31,7 @@
 
           <div class="map">
             <div class='vhod' style="margin-bottom: 20px;">Заказ принят:</div>
-            <img src="./images/map.jpeg" alt="" />
+            <img src="../src/images/map.jpeg" alt="" />
           </div>
           <div class="info" style="justify-content: center; line-height: 2; margin-top: 70px;">
             <div class="product-name">Имя покупателя:</div>
@@ -63,7 +44,7 @@
     <div class="products">
       <div class="product-image">
         <div class='vhod' style="margin-bottom: 20px;">Добавлено: </div>
-        <img src="" alt="" />
+        <img src="../src/images/" alt="" />
       </div>
       <div class="info" style="justify-content: center; line-height: 2; margin-top: 70px;">
         <div class="product-name">Название:</div>
@@ -77,7 +58,7 @@
 
         <div class="map">
           <div class='vhod' style="margin-bottom: 20px;">Заказ принят:</div>
-          <img src="./images/map.jpeg" alt="" />
+          <img src="../src/images/map.jpeg" alt="" />
         </div>
         <div class="info" style="justify-content: center; line-height: 2; margin-top: 70px;">
           <div class="product-name">Имя покупателя:</div>
@@ -89,7 +70,7 @@
     <div class="products">
       <div class="product-image">
         <div class='vhod' style="margin-bottom: 20px;">Добавлено: </div>
-        <img src="" alt="" />
+        <img src="../src/images/" alt="" />
       </div>
       <div class="info" style="justify-content: center; line-height: 2; margin-top: 70px;">
         <div class="product-name">Название:</div>
@@ -103,7 +84,7 @@
 
         <div class="map">
           <div class='vhod' style="margin-bottom: 20px;">Заказ принят:</div>
-          <img src="./images/map.jpeg" alt="" />
+          <img src="../src/images/map.jpeg" alt="" />
         </div>
         <div class="info" style="justify-content: center; line-height: 2; margin-top: 70px;">
           <div class="product-name">Имя покупателя:</div>

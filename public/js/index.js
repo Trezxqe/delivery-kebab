@@ -84,4 +84,22 @@ function logOut(target) {
       }
     })
     .catch(console.log);
-}
+  }
+
+    function courierProfile(target) {
+      fetch('/courier/profile', {})
+        .then((response) => response.text())
+        .then((data) => {
+          const inner = document.getElementById('inner');
+          inner.innerHTML = data;
+        });
+      }
+
+      function userProfile(target) {
+        fetch('/profile', {})
+          .then((response) => response.text())
+          .then((data) => {
+            const inner = document.getElementById('inner');
+            inner.innerHTML = data;
+          });
+        }

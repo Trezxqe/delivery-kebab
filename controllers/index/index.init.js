@@ -4,6 +4,9 @@ const indexLogout = require('./indexLogout');
 const indexRegistrationForm = require('./indexRegistrationForm');
 const indexRegistration = require('./indexRegistration');
 const indexLogin = require('./indexLogin');
+const indexCourier = require('./indexCourier');
+const profileCourier = require('./profileCourier');
+const profileUser = require('./profileUser');
 
 module.exports = {
   indexRender,
@@ -12,4 +15,7 @@ module.exports = {
   indexLogout,
   indexRegistrationForm,
   indexRegistration,
+  indexCourier,
+  profileCourier,
+  profileUser,
 };

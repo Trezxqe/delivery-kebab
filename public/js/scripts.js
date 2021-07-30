@@ -32,6 +32,12 @@ body.addEventListener('click', (e) => {
       case 'logOut':
         logOut(e.target);
         break;
+      case 'courierProfile':
+        courierProfile(e.target);
+        break;
+        case 'userProfile':
+          userProfile(e.target);
+          break;
       default:
         break;
     }
