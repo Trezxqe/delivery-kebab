@@ -350,3 +350,22 @@ input[type='file'] {
   padding: 40px;
   border-radius: 25px;
 }
+
+.subWr {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid;
+}
+.subWr div {
+  font-size: 20px;
+}
+
+.buyOutPrice {
+  color: red;
+}
+.buyOutItem {
+  background: white;
+  border-radius: 25px;
+  padding: 5px 20px;
+  margin-bottom: 15px;
+}

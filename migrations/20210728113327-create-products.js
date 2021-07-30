@@ -34,6 +34,13 @@ module.exports = {
       },
       buyerId: {
         type: Sequelize.INTEGER,
+        allowNull: true,
+        references: {
+          model: 'users',
+          key: 'id',
+          onUpdate: 'cascade',
+          onCreate: 'cascade',
+        },
       },
       status: {
         type: Sequelize.STRING,

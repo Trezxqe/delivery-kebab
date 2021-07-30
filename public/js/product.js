@@ -47,5 +47,6 @@ function createProduct(target) {
     });
 }
 function buyProduct(target) {
-  console.log('buy');
+  const id = target.id.split('_')[1];
+  fetch(`/product/buy/${id}`);
 }

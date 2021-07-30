@@ -8,21 +8,61 @@
 
 <div class='sections'>
   <div class='bg-image'>
-    <img src='../src/site/kebab.jpg' alt='' />
+    <div class='adressItem' style='width: 100%'>
+      <span style='color: #c0312f; font-weight: 900; font-size: 28px;'>Активные
+        заказы
+      </span>
+      <div class='activeWrapper'>
+        {{#each activeOrders}}
+          <div class='buyOutItem' id='active_{{id}}'>
+            <div class='subWr'>
+              <div class='buyOutId'>{{id}}</div>
+              <div class='buyOutTitle'>{{name}}</div>
+              <div class='buyOutPrice'>{{discount}}</div>
+            </div>
+            <div style='text-align: right; margin: 30px 0 15px;'><button
+                type='button'
+                data-type='close'
+                class='courier-style'
+              >Удалить</button></div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+    <div class='adressItem' style='width: 100%'>
+      <span
+        style='color: #c0312f; font-weight: 900; font-size: 28px;'
+      >Выкупленные заказы
+      </span>
+      <div class='buyOutWrapper'>
+        {{#each buyOutOrders}}
+          <div class='buyOutItem' id='pending_{{id}}'>
+            <div class='subWr'>
+              <div class='buyOutId'>{{id}}</div>
+              <div class='buyOutTitle'>{{name}}</div>
+              <div class='buyOutPrice'>{{discount}}</div>
+            </div>
+            <div class='subWrRow'>
+              <div class='buyOutPhone'>Телефон: {{'user.phone'}}</div>
+              <div class='buyOutAddress'>Адрес: {{'user.address'}}</div>
+            </div>
+            <div style='text-align: right; margin: 30px 0 15px;'><button
+                type='button'
+                data-type='close'
+                class='courier-style'
+              >Закрыть</button></div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
   </div>
 
-  <form
-    class='form'
-    id='login'
-    action='/login'
-    method='POST'
-    style='line-height: 3;'
-  >
+  <form class='form' style='line-height: 3;'>
     <span class='formText vhod'>
       Профиль
     </span>
     <div class='adressItem username'>
-      {{userId}}/{{username}}
+      {{username}}
     </div>
 
     <div class='adressItem' style='width: 100%'>
@@ -45,11 +85,6 @@
       {{phone}}
     </div>
 
-    <a
-      id='formRegister'
-      class='linkButton vhod'
-      href='/'
-      style='text-decoration: underline; font-size: 18px;'
-    >Вернуться на свою страницу</a>
+    <a class='linkButton' href='/' style='font-size: 18px;'>На главную</a>
   </form>
 </div>

@@ -35,6 +35,16 @@ module.exports = (sequelize) => {
           onCreate: 'cascade',
         },
       },
+      buyerId: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        references: {
+          model: 'users',
+          key: 'id',
+          onUpdate: 'cascade',
+          onCreate: 'cascade',
+        },
+      },
       status: {
         type: DataTypes.STRING,
         defaultValue: 'new',
