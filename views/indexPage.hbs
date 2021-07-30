@@ -15,11 +15,18 @@
         <style>
           #inputAddress { display: block; }
         </style>
-        <button id='userProfile' class='user-style' type='button'>Профиль П</button>
+        <button
+          id='userProfile'
+          class='user-style'
+          type='button'
+        >Профиль</button>
       {{/if}}
       {{#if roleCourier}}
-        <button id='courierProfile' class='courier-style' type='button'>Профиль
-          К</button>
+        <button
+          id='courierProfile'
+          class='courier-style'
+          type='button'
+        >Профиль</button>
         <button id='createProduct' class='add-style' type='button'>Добавить
           доставку</button>
       {{/if}}
@@ -51,12 +58,15 @@
             <div class='product-price'>Цена: {{price}}</div>
             <div class='product-discount'>Цена со скидкой: {{discount}}</div>
             <div class='product-time'>Адрес: {{address}}</div>
+            {{#if ../roleUser}}
             <button
-              style='button-buy'
+              style='margin-top: 25px;'
+              class='user-style'
               type='button'
               data-type='buy'
               id='buy_{{id}}'
             >Купить</button>
+            {{/if}}
           </div>
           <div class='mapWrapper'>
             <div

@@ -48,5 +48,14 @@ function createProduct(target) {
 }
 function buyProduct(target) {
   const id = target.id.split('_')[1];
-  fetch(`/product/buy/${id}`);
+  fetch(`/product/buy/${id}`)
+    .then((res) => res.json())
+    .then((data) => {
+      const div = document.getElementById(`product_${id}`);
+      const p = document.createElement('p');
+      p.innerText = data.message;
+      p.className = 'success-block';
+      div.append(p);
+      target.style = 'display: none';
+    });
 }

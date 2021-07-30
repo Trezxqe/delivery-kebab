@@ -343,14 +343,20 @@ input[type='file'] {
 
 .success-block {
   position: absolute;
-  left: 40%;
+  left: 30%;
   z-index: 9;
   background: green;
   color: white;
   padding: 40px;
   border-radius: 25px;
+  width: 500px;
+  text-align: center;
+  box-shadow: 0 0 200px 20px white;
+  opacity: 1 !important;
 }
-
+.opacity {
+  opacity: 0.4;
+}
 .subWr {
   display: flex;
   justify-content: space-between;
