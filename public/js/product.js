@@ -1,10 +1,10 @@
 function submitProduct(target) {
-  const { img, name, price, productLocation } = target;
+  const { img, name, price, coords } = target;
   const { action, method } = target;
 
   const text = {
     name: name.value,
-    coords: productLocation.value,
+    coords: coords.value,
     price: price.value,
   };
 
@@ -34,6 +34,7 @@ function createProduct(target) {
     .then((data) => {
       const inner = document.getElementById('inner');
       inner.innerHTML = data;
+      ymaps.ready(init);
     });
 }
 function deleteProduct(target) {}

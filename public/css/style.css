@@ -270,6 +270,31 @@ input[type='radio'] {
 .logout-style {
   font-size: 8px !important;
 }
+.add-image{
+  padding-top: 7px;
+  width: 0;
+}
+
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  cursor: pointer;
+  color: rgb(15, 11, 9);
+  font-size: 25px;
+  line-height: 25px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background-image: linear-gradient(
+    to right,
+    rgb(207, 112, 35) 0%,
+    rgb(190, 17, 11) 50%,
+    rgb(230, 226, 39) 100%
+  );
+  box-shadow: rgb(0, 0, 0) 3px 3px 10px 3px;
+  border: 2px solid #ffcf31;
+  display: inline-block;
+}
 
 .login-style,
 .reg-style,
