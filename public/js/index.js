@@ -28,7 +28,7 @@ function submitLogin(target) {
 function submitRegister(target) {
   const { login, phone, password, role, address, coords } = target;
   const { action, method } = target;
-  
+
   fetch(action, {
     method,
     headers: { 'Content-Type': 'application/json' },
@@ -85,4 +85,22 @@ function logOut(target) {
       }
     })
     .catch(console.log);
+}
+
+function courierProfile(target) {
+  fetch('/courier/profile', {})
+    .then((response) => response.text())
+    .then((data) => {
+      const inner = document.getElementById('inner');
+      inner.innerHTML = data;
+    });
+}
+
+function userProfile(target) {
+  fetch('/profile', {})
+    .then((response) => response.text())
+    .then((data) => {
+      const inner = document.getElementById('inner');
+      inner.innerHTML = data;
+    });
 }

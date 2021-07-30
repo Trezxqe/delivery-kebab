@@ -51,16 +51,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Middlewares
 app.use(require('./middlewares/defaultTitle'));
 app.use(require('./middlewares/checkAutorize'));
-// app.use(multer({dest:"/images/"}).single("img"));
-
-// const multer = require('multer');
-// const upload = multer({ dest: './public/src/images' });
-
-// app.post('/product/add', upload.single('img'), function (req, res, next) {
-// console.log(req.file);
-// next();
-//   // req.body сохранит текстовые поля, если они будут
-// })
 
 // Routes
 app.use('/', require('./routes/index.route'));

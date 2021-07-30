@@ -23,6 +23,9 @@ module.exports = (sequelize) => {
       coords: {
         type: DataTypes.INTEGER,
       },
+      address: {
+        type: DataTypes.INTEGER,
+      },
       userId: {
         type: DataTypes.INTEGER,
         references: {
@@ -32,8 +35,19 @@ module.exports = (sequelize) => {
           onCreate: 'cascade',
         },
       },
+      buyerId: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        references: {
+          model: 'users',
+          key: 'id',
+          onUpdate: 'cascade',
+          onCreate: 'cascade',
+        },
+      },
       status: {
         type: DataTypes.STRING,
+        defaultValue: 'new',
       },
       createdAt: DataTypes.DATE,
       updatedAt: DataTypes.DATE,
